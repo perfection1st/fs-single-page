@@ -1,0 +1,23 @@
+{
+  "name": "fs-single-page",
+  "version": "1.0.0",
+  "description": "A test single page full stack application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfection1st/fs-single-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perfection1st/fs-single-page/issues"
+  },
+  "homepage": "https://github.com/perfection1st/fs-single-page#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  }
+}
