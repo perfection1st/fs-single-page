@@ -25,7 +25,7 @@ app.route('/api/cars/')
     })
 })
 .post((req, res) => {
-    client.query(`INSERT INTO cars (make, year, color) VALUES ('$1','$2','$3')`, [req.body.make, req.body.year, req.body.color])
+    client.query(`INSERT INTO cars (make, year, color) VALUES ($1,$2,$3)`, [req.body.make, req.body.year, req.body.color])
     .then(result => {
         res.status(201).send('Car added.')
     })
@@ -45,7 +45,7 @@ app.route('/api/owners/')
     })
 })
 .post((req, res) => {
-    client.query(`INSERT INTO owners (first_name, last_name, cars_id) VALUES ('$1','$2','$3')`, [req.body.first_name, req.body.last_name, req.body.cars_id])
+    client.query(`INSERT INTO owners (first_name, last_name, cars_id) VALUES ($1,$2,$3)`, [req.body.first_name, req.body.last_name, req.body.cars_id])
     .then(result => {
         res.status(201).send('Owner added.')
     })

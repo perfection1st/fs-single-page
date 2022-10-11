@@ -46,13 +46,26 @@ fetch('http://localhost:3001/api/cars')
 
 //adding an event listener
 let submitAddCar = document.getElementById("submit-add-car");
+let inputMake = document.getElementById("make").value;
+let inputColor = document.getElementById("year").value;
+let inputYear = document.getElementById("color").value;
+
+
 
 submitAddCar.addEventListener("click", function (event) {
     //event.preventDefault prevents the default action of the input type of submit
     event.preventDefault();
-    console.log("working button")
-})
+    // create Fetch command POST functionality
 
+    
+})
+fetch('http://localhost:3001/api/owners', {
+  method: 'POST',
+  body: JSON.stringify({make: `'${inputMake}'`, year: inputYear, color: `'${inputColor}'`}),
+  headers: { 'Content-Type': 'application/json' }
+}) 
+.then(response => { response.json() })
+.then(data => { console.log(data) }); 
 
 
 
